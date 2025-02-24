@@ -1,0 +1,57 @@
+/*
+cores 
+rosa - #BF3676
+preto - #07060D
+roxo escuro - #161426
+violeta - #9B95BF
+Violeta claro - #C2BFD9
+*/
+
+:root {
+    --rosa: #BF3676;
+    --preto: #07060D;
+    --roxo-escuro: #161426;
+    --violeta: #9B95BF;
+    --Violetaclaro: #C2BFD9;
+} 
+
+body {
+    margin: 0;
+    background: rgb(22,20,38);
+    background: linear-gradient(190deg, rgba(22,20,38,1) 0%, rgba(49,21,56,1) 100%);
+    overflow-y: hidden;
+}
+article {
+    width: min-content;
+    margin: 0 auto;
+    text-align: center;
+}
+h1 {
+    font-size: 60px;
+    margin: 5% 0 1%;
+    color: white;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    text-shadow: #9B95BF 1px 1px 20px ;
+} 
+h2 {
+    font-size: 20px;
+    margin: 5% 0 1%;
+    color: white;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    text-shadow: #9B95BF 1px 1px 20px ;
+}
+a {
+    font-size: 14px;
+    margin: 5% 0 1%;
+    color: white;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    text-shadow: #9B95BF 1px 1px 20px ;
+}
+aside {
+    padding: 10% 5%;
+    margin-bottom: 20vh;
+}
+img {
+    width: 70vh;
+
+}

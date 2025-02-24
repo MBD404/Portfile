@@ -3,15 +3,22 @@ const carouselItems = document.querySelectorAll('.carousel-item');
 const prevButton = document.querySelector('.carousel-control.prev');
 const nextButton = document.querySelector('.carousel-control.next');
 
+
 const link = document.createElement("a");
 link.href = "#"
 link.target = "_blank";
 
-let projects = ["Python","Java Script","PHP","HTML5","CSS"]
+let projects = ["python","javascript","php","html5","css"]
 let currentIndex = 0;
 function getThePage() {
     console.log(`indo para pagina do ${projects[currentIndex]}`)
-    window.location.href = "#"
+    let pagepath = `src/pages/${projects[currentIndex]}.html`
+    if (pagepath) {
+      window.location.href = pagepath
+    } else {
+      window.location.href = `src/pages/notfound.html`
+    }
+    
 }
 
 function updateCarousel() {
