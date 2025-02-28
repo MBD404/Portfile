@@ -8,7 +8,7 @@ const link = document.createElement("a");
 link.href = "#"
 link.target = "_blank";
 
-let projects = ["python","javascript","php","html5","css"]
+let projects = ["python","js","php","html5","css"]
 let currentIndex = 0;
 function getThePage() {
     console.log(`indo para pagina do ${projects[currentIndex]}`)
