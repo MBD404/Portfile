@@ -86,12 +86,14 @@ hr {
     background-color: #9B95BF;
     color: #07060D;
     font-size: 22px;
+    box-shadow: 2px 1px 3px 1px black;
 }
 
 .hot-content > div > button:hover {
     scale: 1.1;
     background-color: var(--rosa);
     color: white;
+    box-shadow: 2px 1px 5px 1px black;
 }
 main {
     height: 75vh;

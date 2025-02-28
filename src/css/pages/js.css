@@ -88,12 +88,14 @@ background: linear-gradient(43deg, rgba(224,230,86,1) 0%, rgba(177,174,107,1) 10
     background-color: #9B95BF;
     color: #07060D;
     font-size: 22px;
+    box-shadow: 2px 1px 3px 1px black;
 }
 
 .hot-content > div > button:hover {
     scale: 1.1;
     background-color: var(--rosa);
     color: white;
+    box-shadow: 2px 1px 5px 1px black;
 }
 main {
     height: 75vh;
@@ -101,11 +103,13 @@ main {
 background: linear-gradient(43deg, rgba(253,255,209,1) 0%, rgba(255,236,199,1) 100%);
 }
 .projects > h1{
+    text-shadow: none;
     margin: 0;
     color: #07060D;
 }
 .li-project {
     display: flex;
+
     padding: 1%;
 }
 .li-project > hr {
@@ -113,6 +117,7 @@ background: linear-gradient(43deg, rgba(253,255,209,1) 0%, rgba(255,236,199,1) 1
     color: #07060D;
 }
 .li-project > h1 {
+    text-shadow: none;
     margin: 0;
     color: #07060D;
 }
@@ -146,6 +151,7 @@ ul > li {
 /* footer */
 
 footer {
+    text-shadow: none;
     background-color: #C2BFD9;
     color: var(--preto);
 }

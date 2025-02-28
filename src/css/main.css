@@ -93,7 +93,7 @@ main {
     margin: 0 0 30px;
     font-size: 45px;
 }
-/* carroussel effect */
+
 
 .carousel {
     margin: 0 auto 30px;
@@ -112,16 +112,16 @@ main {
   }
   
   .carousel-item {
-    flex: 0 0 25%; /* Reduzimos a largura dos itens para 25% */
+    flex: 0 0 25%;
     display: flex;
-    justify-content: center; /* Centraliza horizontalmente */
-    align-items: center; /* Centraliza verticalmente */
+    justify-content: center; 
+    align-items: center; 
     transition: transform 0.5s ease-in-out, filter 0.5s ease-in-out, opacity 0.5s ease-in-out;
-    box-sizing: border-box; /* Evita problemas com margens e paddings */
+    box-sizing: border-box; 
   }
   
   .carousel-item img {
-    width: 200%; /* Reduzimos o tamanho da imagem */
+    width: 200%; 
     height: auto;
     border-radius: 50px;
 
