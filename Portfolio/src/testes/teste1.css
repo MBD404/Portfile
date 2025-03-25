@@ -1,0 +1,96 @@
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #fff   ;
+    overflow: hidden;
+  }
+  
+  .carousel {
+    border: 1px solid;
+    padding: 20px 0;
+    position: relative;
+    width: 40%;
+    height: 25vh;
+    max-width: 800px;
+    overflow: hidden;
+  }
+  
+  .carousel-inner {
+    display: flex;
+    margin-left: 15vw;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .carousel-item {
+    flex: 0 0 25%; /* Reduzimos a largura dos itens para 25% */
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    transition: transform 0.5s ease-in-out, filter 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    box-sizing: border-box; /* Evita problemas com margens e paddings */
+  }
+  
+  .carousel-item img {
+    width: 180%; /* Reduzimos o tamanho da imagem */
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+    transition: transform 0.5s ease-in-out, filter 0.5s ease-in-out;
+  }
+  
+  /* Item central (ativo) */
+  .carousel-item.active {
+    transform: scale(1.2);
+    filter: brightness(1.5) blur(0);
+    z-index: 2;
+  }
+  
+  /* Itens adjacentes (anterior e próximo) */
+  .carousel-item.prev,
+  .carousel-item.next {
+    transform: scale(0.9);
+    filter: brightness(0.8) blur(2px);
+    opacity: 1;
+  }
+  
+  /* Item anterior */
+  .carousel-item.prev {
+    transform: translateX(-30%) scale(0.9); /* Ajuste no deslocamento */
+  }
+  
+  /* Item próximo */
+  .carousel-item.next {
+    transform: translateX(30%) scale(0.9); /* Ajuste no deslocamento */
+  }
+  
+  /* Itens mais distantes (escondidos) */
+  .carousel-item:not(.active):not(.prev):not(.next) {
+    transform: scale(0.8);
+    filter: brightness(0.5) blur(5px);
+    opacity: 0.3;
+  }
+  
+  /* Botões de controle */
+  .carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.5);
+    border: none;
+    color: #000;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 3;
+  }
+  
+  .carousel-control.prev {
+    left: 10px;
+  }
+  
+  .carousel-control.next {
+    right: 10px;
+  }

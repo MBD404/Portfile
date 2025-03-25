@@ -1,0 +1,96 @@
+body {
+    margin: 0;
+    overflow-x: hidden;
+}*/
+section.slider{
+    margin: 0 auto;
+    width: 100%;
+    height: auto;
+    padding: 0;
+    overflow: hidden;
+}
+
+.slider-content {
+    width: 100%;
+    height: auto;
+    display: flex;
+    margin-left: 40vw;
+}
+.slider-content input, .mobile {
+    display: none;
+}
+
+.slide-box {
+    width: 15%;
+    height: auto;
+    position: relative;
+    text-align: center;
+    transition: 1s;
+    z-index: -1;
+}
+.slide-box img {
+    width: 100%;
+    margin: 0 5%;
+    z-index: -1;
+}
+
+.nav-manual, .nav-auto {
+    position: absolute;
+    width: 100%;
+    margin-top: 5%;
+    display: flex;
+    justify-content: center;
+}
+.nav-manual .manual-btn, .nav-auto div {
+    border: 1px solid red;
+    padding: 10px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.nav-manual .manual-btn:not(:last-child), .nav-auto div:not(:last-child) {
+    margin-right: 10px;
+}
+.nav-manual .manual-btn:hover {
+    background-color: red;
+}
+.wall-flex {
+    display: flex;
+}
+.wall-left {
+    width: 34vw;
+    height: 55vh;
+    margin-top: -20%;
+    background-color: black;
+    z-index: 2;
+}
+.wall-right {
+    width: 34vw;
+    height: 55vh;
+    margin-top: -20%;
+    margin-left: auto;
+    background-color: black;
+    z-index: 2;
+}
+
+#radio1:checked ~ .nav-auto .auto-btn1, #radio2:checked ~ .nav-auto .auto-btn2, #radio3:checked ~ .nav-auto .auto-btn3, #radio4:checked ~ .nav-auto  .auto-btn4, #radio5:checked ~ .nav-auto  .auto-btn5, #radio6:checked ~ .nav-auto  .auto-btn6  {
+    background-color: red;
+}
+#radio1:checked ~ .py {
+    margin-left: 0%;
+}
+#radio2:checked ~ .py {
+    margin-left: -15%;
+}
+#radio3:checked ~ .py {
+    margin-left: -30%;
+}
+#radio4:checked ~ .py {
+    margin-left: -45%;
+}
+#radio5:checked ~ .py {
+    margin-left: -60%;
+}
+#radio6:checked ~ .py {
+    margin-left: -75%;
+}
