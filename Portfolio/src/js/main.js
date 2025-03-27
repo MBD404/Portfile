@@ -5,7 +5,13 @@ const overlay = document.querySelector('.overlay');
 const images = document.querySelectorAll('.image');
 const prevButton = document.querySelector('.carousel-control.prev');
 const nextButton = document.querySelector('.carousel-control.next');
+const link = document.createElement("a");
 
+link.href = "#"
+link.target = "_blank";
+
+let projects = ["python","js","php","html5","css"]
+let currentIndex = 0;
 
 const transitionanimate = [
   { background: "rgba(0, 0, 0, 0)" },
@@ -17,63 +23,49 @@ const transitionTiming = {
   iterations: 1,
 }
 
+function animation(){
+  let ci = carouselItems[currentIndex]
+  let img = images[currentIndex]
 
-document.addEventListener("DOMContentLoaded", function () {
-carouselItems.forEach(item => {
-  item.addEventListener('click', function () {
-    if (item.classList.contains("active"))
-      {
+  if (ci.classList.contains("active"))
+    {
       window.scroll({
         top: 750,
         behavior: "smooth"
       })
-      carouselItems.forEach(i => { 
-        i.classList.remove('active');
-      });
-      this.classList.add('active');
-
-      if (item.classList.contains('active')) {[
-        this.style.opacity = '1'
-      ]}
+      ci.classList.add('active')
+      ci.style.opacity = '1'
       carousel.classList.add('active')
-      
-      
+      images.forEach(image => {
+          image.classList.remove('active');
+          image.classList.add("off")
+      })
+      img.classList.remove('off')
+      img.classList.add('active')
+      prevButton.style.opacity='0';nextButton.style.opacity='0'
     }
-  });
-});
-images.forEach(image => {
-  image.addEventListener('click', function() {
-      carouselItems
-      images.forEach(img => {
-        img.classList.remove('active');
-        img.classList.add("off")
-      });
+}
+document.addEventListener("DOMContentLoaded", function () {
 
-      this.classList.add('active');
-      if (image.classList.contains("active")) {
-          this.style.opacity='1'
+/*
+      //this.classList.add('active');
+      //if (image.classList.contains("active")) {
+          //this.style.opacity='1'
           
 
           overlay.style.display = 'block'
           overlay.animate(transitionanimate, transitionTiming)
-          prevButton.style.opacity='0'
-          nextButton.style.opacity='0'
+          
       }
       
-  });
-});
+  //});
 overlay.addEventListener("click", function () {
-  this.style.display = 'none';
+  //this.style.display = 'none';
 
-  carouselItems.forEach(item=> item.classList.remove('active'));
+  carouselItems.forEach(item=> item.classList.remove('active'));*/
 })
 
-const link = document.createElement("a");
-link.href = "#"
-link.target = "_blank";
 
-let projects = ["python","js","php","html5","css"]
-let currentIndex = 0;
 
 
 function getThePage() {
@@ -83,7 +75,7 @@ function getThePage() {
     if (pagepath) {
      
       //overlay.style.display = 'block';
-      carouselItems[currentIndex].classList.add('ativo');
+      //carouselItems[currentIndex].classList.add('ativo');
       setTimeout(()=>{window.location.href = pagepath},800)
     } else {
       //window.location.href = `src/pages/notfound.html`
@@ -101,6 +93,8 @@ function updateCarousel() {
 
   // Adiciona a classe 'active' ao item central
   carouselItems[currentIndex].classList.add('active');
+  //images[currentIndex].classList.add('active')
+  images[currentIndex].addEventListener('click', animation, false)
   carouselItems[currentIndex].addEventListener('click', getThePage, false)     
 
  
@@ -146,4 +140,3 @@ nextButton.addEventListener('click', () => {
 // Inicializa o carrossel
 updateCarousel();
 
-})
