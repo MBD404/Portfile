@@ -6,39 +6,77 @@
     <title>Document</title>
     <link rel="stylesheet" href="/src/css/pages/py.css">
     <link rel="stylesheet" href="/src/css/header.css">
+    <link rel="stylesheet" href="/src/css/animation.css">
     <script src="https://kit.fontawesome.com/d16b419255.js" crossorigin="anonymous"></script>
 </head>
 <body>
+    <img class="transitionimg" src="/src/assets/img/py.png" alt="python logo">
+    <section class="transition">
+        
+    </section>   
     <header>
-        <nav class="nav-bar">
-            <aside  class="nav-contents">
+        <nav class="nav-bar content">
+            <aside  class="nav-contents ">
                 <a href="../../index.html" class="text-nav">Início</a>
-                <select name="" id="">
+                <select name="" id="pages" onchange="changePage()">
                      <option class="text-nav" value="">Projetos</option> 
                      <option class="text-nav" value="python">Python</option> 
                      <option class="text-nav" value="js">Java Script</option> 
+                     <option class="text-nav" value="php">PHP</option> 
+                     <option class="text-nav" value="html5">HTML5</option> 
+                     <option class="text-nav" value="css3">CSS3</option> 
                 </select>
                 <a href="/src/pages/notfound.html" class="text-nav">Sobre Mim</a>
             </aside>
         </nav>
-        <img src="/src/assets/img/py.png" alt="python logo">
-        <article>
+        <section class="content">
+            <img src="/src/assets/img/py.png" alt="python logo">
+        </section>
+        <article class="content">
             <aside>
                 <h1>Bem-Vindo aos meus projetos Python</h1>
                 <h3>
                     Python, caso você não saiba, python ela é uma linguagem focada em "automação", sendo na sua maior parte focada em back-end, porém o que se destaca, além de ser uma linguagem gentil com os usuários, sendo acessivel a todos, ela se destaca pela sua infinidade de bibliotecas e frameworks, sendo uma linguagem versatil e em minha opinião, revolucionária e inovadora
                 </h3>
             </aside>
-            <hr>
-            <aside class="hot-projects">
+            <hr class="content">
+            <aside class="hot-projects content">
                 <p>PROJETOS EM DESTAQUE!</p>
                 <div class="hot-content">
-                    <div><h2>text test</h2> <img src="/src/assets/img/placeholder-photo.png" alt="projeto"> <br> <button>Saiba Mais</button></div>
-                    <div><h2>text test</h2> <img src="/src/assets/img/placeholder-photo.png" alt="projeto"> <br> <button>Saiba Mais</button></div>
-                    <div><h2>text test</h2> <img src="/src/assets/img/placeholder-photo.png" alt="projeto"> <br> <button>Saiba Mais</button></div>
+                    <div>
+                        <h2>Gerador de pdf</h2>
+                        <a href="/src/projects/python/GeradorDePdf.rar" download>
+                            <img src="/src/assets/img/thumb-1.jpg" alt="projeto">
+                        </a>
+                        <br>
+                        <a href="/src/projects/python/GeradorDePdf.rar" download class="button">
+                            <button>Baixar Codigo</button>
+                        </a>
+                    </div>
+                    <div>
+                        <h2>text test</h2>
+                        <a href="#">
+                            <img src="/src/assets/img/placeholder-photo.png" alt="projeto">
+                        </a>
+                        <br>
+                        <a href="#" class="button">
+                            <button>Baixar Codigo</button>
+                        </a>
+                    </div>
+                    <div>
+                        <h2>text test</h2>
+                        <a href="#">
+                            <img src="/src/assets/img/placeholder-photo.png" alt="projeto">
+                        </a>
+                        <br>
+                        <a href="#" class="button">
+                            <button>Baixar Codigo</button>
+                        </a>
+                    </div>
                 </div>
             </aside>
         </article>
+        
     </header>
     <hr>
     <main>
@@ -71,15 +109,16 @@
         <h2>Contatos:</h2>
         <aside>
             <div class="contact-left">
-            <p><img src="/src/assets/icon/github.png" alt="" srcset=""><a href="">MBD404</a></p>
-            <p><img src="/src/assets/icon/linkedin.png" alt="" srcset=""><a href="">Miguel Bento Ferreira de Oliveira</a></p>
+            <p><img src="/src/assets/icon/github.png" alt="" srcset=""><a href="#">MBD404</a></p>
+            <p><img src="/src/assets/icon/linkedin.png" alt="" srcset=""><a href="#">Miguel Bento Ferreira de Oliveira</a></p>
             </div>
             <hr>
             <div class="contact-right">
-            <p><img src="/src/assets/icon/whatsapp.png" alt="" srcset=""><a href=""> +55 32 998 609 167</a></p>
-            <p><img src="/src/assets/icon/discordia.png" alt="" srcset=""><a href="">Majin3650</a></p>
+            <p><img src="/src/assets/icon/whatsapp.png" alt="" srcset=""><a href="#"> +55 32 998 609 167</a></p>
+            <p><img src="/src/assets/icon/discordia.png" alt="" srcset=""><a href="#">Majin3650</a></p>
             </div>
         </aside>
     </footer>
+    <script src="/src/js/pages.js"></script>
 </body>
 </html>

@@ -23,28 +23,9 @@ body {
 header {
     background: rgb(91,142,131);
     background: linear-gradient(346deg, rgba(91,142,131,1) 23%, rgba(86,121,164,1) 49%, rgba(34,40,98,1) 100%);
-    
-}
-header > img {
-    width: 180px;
-    margin: 2% 20% 0;
-}
-header > article > aside > h1 {
-    font-size: 60px;
-    width: 40vw;
-    margin: 1% 5%;
-    text-align: center;
 }
 
-header > article > aside > h3 {
-    font-size: 20px;
-    width: 40vw;
-    margin: 2% 5%;
-    text-align: center;
-}
-hr {
-    margin: 0;
-}
+
 
 .hot-projects {
     width: 100%;
@@ -52,8 +33,9 @@ hr {
     background-color: rgba(255, 251, 0, 0.562);
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
-    padding: 1px 0 10%;
+    padding: 1px 0 15%;
     text-align: center;
+    z-index: 4;
 }
 .hot-projects > p {
     font-size: 60px;
@@ -65,41 +47,47 @@ hr {
     display: flex;
 }
 .hot-content > div {
-    border: 1px solid;
+    border: 1px solid black;
     width: 400px;
-    margin: 0 auto;
+    border-radius: 20px;
+    margin: 0 auto 6vh;
     text-align: center;
     padding-bottom: 30px;
     
 }
-.hot-content > div > img {
+.hot-content > div > a > img {
     width: 260px;
+
     margin: 0 17%;
 }
-.hot-content > div > button {
-    width: 150px;
-    height: 40px;
-    margin-top: 5px;
+.hot-content > div > a > button {
+    width: 190px;
+    height: 50px;
+    margin-top: 30px;
     transition: 0.3s;
+    border-radius: 10px;
     border: none;
-    border-radius: 20px;
     background-color: #9B95BF;
     color: #07060D;
     font-size: 22px;
     box-shadow: 2px 1px 3px 1px black;
 }
 
-.hot-content > div > button:hover {
+.hot-content > div > a >button:hover {
     scale: 1.1;
+    cursor: pointer;
     background-color: var(--rosa);
     color: white;
     box-shadow: 2px 1px 5px 1px black;
 }
 main {
+    
     height: 75vh;
     background: rgb(195,255,235);
     background: linear-gradient(43deg, rgba(195,255,235,1) 0%, rgba(249,255,196,1) 100%);
+    z-index: 4;
 }
+
 .projects > h1{
     margin: 0;
     color: #07060D;
@@ -148,6 +136,7 @@ ul > li {
 footer {
     background-color: #C2BFD9;
     color: var(--preto);
+    z-index: 6;
 }
 footer > h2 {
     margin: 0;

@@ -6,23 +6,33 @@
     <title>Document</title>
     <link rel="stylesheet" href="/src/css/pages/html5.css">
     <link rel="stylesheet" href="/src/css/header.css">
+    <link rel="stylesheet" href="/src/css/animation.css">
     <script src="https://kit.fontawesome.com/d16b419255.js" crossorigin="anonymous"></script>
 </head>
 <body>
+    <img class="transitionimg" src="/src/assets/img/html.png" alt="python logo">
+    <section class="transition">
+        
+    </section>   
     <header>
-        <nav class="nav-bar">
+        <nav class="nav-bar content">
             <aside  class="nav-contents">
                 <a href="../../index.html" class="text-nav">Início</a>
-                <select name="" id="">
-                     <option class="text-nav" value="">Projetos</option> 
-                     <option class="text-nav" value="python">Python</option> 
-                     <option class="text-nav" value="js">Java Script</option> 
-                </select>
+                <select name="" id="pages" onchange="changePage()">
+                    <option class="text-nav" value="">Projetos</option> 
+                    <option class="text-nav" value="python">Python</option> 
+                    <option class="text-nav" value="js">Java Script</option> 
+                    <option class="text-nav" value="php">PHP</option> 
+                    <option class="text-nav" value="html5">HTML5</option> 
+                    <option class="text-nav" value="css3">CSS3</option> 
+               </select>
                 <a href="/src/pages/notfound.html" class="text-nav">Sobre Mim</a>
             </aside>
         </nav>
-        <img src="/src/assets/img/html.png" alt="python logo">
-        <article>
+        <section class="content">
+            <img src="/src/assets/img/html.png" alt="python logo">
+        </section>
+        <article class="content">
             <aside>
                 <h1>Bem-Vindo aos meus projetos HTML5</h1>
                 <h3>
@@ -81,5 +91,6 @@
             </div>
         </aside>
     </footer>
+    <script src="/src/js/pages.js"></script>
 </body>
 </html>

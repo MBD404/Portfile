@@ -1,0 +1,98 @@
+.transition {
+    
+    
+    animation-name: transition-bg;
+    animation-duration: 1s;
+    opacity: 0;
+    z-index: -1;
+}
+.transitionimg {
+    width: 20vw; 
+    
+    opacity: 0;
+    transform: scale(1.6);
+    margin: 28vh 40%;
+    filter: brightness(1.5);
+    position: absolute;
+    animation-name: transtion-img;
+    animation-duration: 5.5s;
+}
+header > article > aside > h1 {
+    font-size: 60px;
+    width: 40vw;
+    margin: 3% 5%;
+    text-align: center;
+    z-index: 2;
+    
+}
+
+header > article > aside > h3 {
+    font-size: 20px;
+    width: 40vw;
+    margin: 2% 5%;
+    text-align: center;
+}
+hr {
+    margin: 0;
+}
+
+header > section> img {
+    
+    width: 180px;
+    scale: 3.5;
+    opacity: 0.3;
+    transform: translateY(60px);
+    margin: 2% 70% 0;
+    z-index: auto;
+    position: absolute;
+}
+@keyframes transtion-img {
+    0% {
+        scale: 1;
+        z-index: 2;
+        opacity: 1;
+    }
+    50%
+    {
+        width: 180px;
+        transform: translateY(60px);
+        scale: 3.5;
+        margin: 4.5% 70% 0;
+        filter: brightness(1);
+        opacity: 1;
+        z-index: 0;
+        
+    }
+    100%
+    {
+        width: 180px;
+        transform: translateY(60px);
+        scale: 3.5;
+        margin: 4.5% 70% 0;
+        filter: brightness(1);
+        z-index: 0;
+        opacity: 0;
+    }
+}
+@keyframes transition-bg {
+    0% {
+        width: 100%;
+        height: 200vh;
+        position: fixed;
+        background-color: #07060D;
+        opacity: 1;
+        z-index: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+@keyframes fadein {
+    0% {opacity: 0;}
+    50% {opacity: 0;}
+    100% {opacity: 1;}
+}
+header > .content{
+    animation-name: fadein;
+    animation-duration: 6s;
+}
