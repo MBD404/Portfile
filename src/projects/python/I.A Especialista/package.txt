@@ -1,0 +1,10 @@
+precisa instalar as dependências
+
+Ollama e o modelo gemma3
+
+LIBS:
+
+langchain
+langchain_ollama
+mysql
+tinker

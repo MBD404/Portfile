@@ -83,7 +83,7 @@ class PDFGeneratorApp:
     def gerar_pdf_thread(self, autor, titulo, prompt):
         try:
             # Chamar a função original de gerar PDF
-            response = ollama.chat(model='deepseek-r1:8b', messages=[
+            response = ollama.chat(model='gemma3:12b', messages=[
                 {
                     'role': 'user',
                     'content': f"""
@@ -94,8 +94,6 @@ class PDFGeneratorApp:
                     isso é importante e não deve ser desrespeitado!!! o texto deve ser construído em um padrão html,
                     com <h1> para titulos <b> para palavras em negrito <p> para parágrafos, seu trabalho é apenas 
                     construir esse texto e não comentar comentários futeis apenas construir esse texto com formato html
-
-                    lembre-se de não escrever ```html pra começar e nem terminar com ``` pois pode haver erros durante o processo
                     """,
                 },
             ])
