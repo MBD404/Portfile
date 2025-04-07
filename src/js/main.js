@@ -10,7 +10,7 @@ const link = document.createElement("a");
 link.href = "#"
 link.target = "_blank";
 
-let projects = ["python","js","php","html5","css"]
+let projects = ["python","js","php","html5","css","kotlin"]
 let currentIndex = 0;
 
 const transitionanimate = [
